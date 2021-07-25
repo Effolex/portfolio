@@ -1,194 +1,183 @@
-.text-decoration-none {
-  text-decoration: none;
-}
-
-/*
-id = cpf; 
-class = grupo;
-
-*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Tokyo+Zoo&display=swap");
 
 body {
-  background: #121212;
-  color: rgb(156, 156, 156);
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 500;
-}
+  font-family: "Bebas Neue", cursive;
 
-h2 {
   text-align: center;
-  margin-top: 5%;
-}
-
-p {
-  padding-right: 20%;
-  padding-left: 20%;
-  padding-top: 5%;
-}
-
-nav {
-  display: inline;
-}
-
-.spacing {
-  padding: 5%;
-}
-
-.avatar {
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  width: 10rem;
-  /*como eu quero que a minha animação do hover
-  ao tirar o mouse, volte de forma gradual
-  eu preciso setar o formato padrão que eu queira
-  pra transicionar gradualmente de volta*/
-  transition-duration: 1s;
-  transform: scale3d(1, 1, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-bottom-style: none;
-  box-shadow: 0px 0px 100px rgba(255, 255, 255, 0);
-}
-
-.avatar:hover {
-  transition-duration: 0.5s;
-  transform: scale3d(1.2, 1.2, 1.3);
-  transform-style: preserve-3d;
-  background: rgba(252, 114, 2, 0.938);
-  border-style: none;
-}
-
-.box-apelido {
-  display: none;
-}
-
-.box-titulo:hover .box-apelido {
-  display: block;
-  color: #d66101;
-}
-
-.box-titulo:hover .box-nome {
-  display: none;
-  color: #d66101;
-}
-
-.div-sobre {
-  background: linear-gradient(0deg, #4b4b4b, #4b4b4b, #121212, #121212);
-  background-size: 200% 200%;
-  animation: gradient 15s linear infinite;
-
-  padding-bottom: 50px;
-}
-.body2 {
-  background: #4b4b4b;
-}
-
-.div2-fim{
-  background: linear-gradient(180deg, #4b4b4b, #4b4b4b, #121212, #121212);
-  background-size: 200% 200%;
-  animation: gradient 15s linear infinite;
-  padding: 100px;
+  background: linear-gradient(-45deg, #7209b7, #560bad, #480ca8, #3a0ca3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 @keyframes gradient {
   0% {
-    background-position: 50% 40%;
+    background-position: 0% 50%;
   }
-  25% {
-    background-position: 50% 70%;
-  }
-  75% {
-    background-position: 50% 70%;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 50% 40%;
+    background-position: 0% 50%;
   }
-}
-
-.sobre-background {
-  display: none;
-  position: absolute;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  filter: blur(2px) brightness(0.5);
-}
-
-#sobre {
-  position: relative;
-  text-align: center;
-  margin: 0;
-  color: rgb(156, 156, 156);
-  font-weight: 600;
-}
-
-/*:first-of-type significa literalmente que vai pegar a primeira instancia deste elemento */
-ul:first-of-type {
-  text-align: center;
-  list-style: inside;
-  font-size: 30px;
-}
-
-ul,
-li,
-h4 {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 /*
-  onde peguei o botão
-  https://www.w3schools.com/howto/howto_css_dropdown.asp
+https://1stwebdesigner.com/15-css-background-effects/
+para fazer esse efeito, eu utilizei o 
+Gradient Background Animation, fui modificando e aprendendo como ele funciona, resumidamente, voce tem um background de cor gradiente, onde voce aumenta o tamanho dele para ser maior do que a area que voce ve, a ideia é que a sua visão seja como a visão de uma lupa, ai voce usa o animation para se mover pelo background, e atravez dos @keyframes eu consigo decidir onde ue quero que ele esteja em cada percentual da animaçã.
 */
-/* Dropdown Button */
 
-.dropbtn {
-  background-color: #121212;
-  color: rgb(136, 136, 136);
-  font-weight: 600;
-  padding: 16px;
-  padding-right: ;
-  font-size: 16px;
-  border: none;
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #fafafa;
+  padding: 20px;
+  font-family: "Bebas Neue", cursive;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+.dud {
+  color: #757575;
+}
+
+#foto-pessoal {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 10%;
+}
+
+#git {
+  width: 50px;
   position: absolute;
+  top: 10px;
+  right: 0px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
+#linkdin {
+  width: 40px;
   position: absolute;
-  background-color: #121212;
-  min-width: 160px;
+  top: 60px;
+  right: 5px;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: rgb(136, 136, 136);
-  padding: 12px 16px;
-  text-decoration: none;
+.personal-wrapper {
+  margin-top: 50px;
+}
+.personal-foreground {
+  backdrop-filter: blur(10px) grayscale(50%);
+  max-width: 350px;
+  min-width: 350px;
+  min-height: 350px;
+  margin: auto;
+}
+
+.sobre-wrapper {
+  width: 350px;
+  height: 200px;
+  align-content: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.sobre-texto,
+.sobre-texto p {
+  width: 250px;
+  float: left;
+  clear: left;
+  font-size: 35px;
+  margin: 0px;
+  color: #4361ee;
+  text-shadow: -5px 5px #000000;
+}
+
+.sobre-barra {
+  width: 10px;
+  height: 100%;
+  background: #4361ee;
+  float: right;
+  clear: right;
+  box-shadow: -5px 5px #3f37c9, -10px 10px #3a0ca3, -15px 15px #480ca8;
+}
+
+#barra-divisao {
+  background: #b5179e;
+  height: 20px;
+  width: 200px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 5px -5px #7209b7, 10px -10px #560bad, 15px -15px #480ca8;
+}
+
+.wrapper-mudar {
+  margin: auto;
+  margin-top: 50px;
+  width: 350px;
+  color: #b5179e;
+  align-content: center;
+}
+
+.wrapper-mudar p {
+  font-size: 30px;
+  text-shadow: 5px -5px #3a0ca3;
+}
+
+.wrapper-skills {
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+.wrapper-skills p {
+  font-size: 50px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.skills-arvore {
+  height: 30px;
+  width: 100px;
+  background: #7209b7;
+  margin: auto;
+  margin-top: 70px;
+  box-shadow: 100px 100px #000000, -100px 100px #000000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.aaa {
+  margin-top: 1000px;
+}
+
+.flecha {
+  position: relative;
+  margin: 100px auto;
+  background: #fff;
+  height: 50px;
+  width: 2px;
+  animation: flecha 5s ease infinite;
+}
+
+@keyframes flecha {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.flecha::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  bottom: 5px;
+  z-index: 11;
   display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  /*nada*/
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  
-}
-
-.avatar::before {
-  transition-duration: 2s;
-  transform: scale3d(1, 1, 1);
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(225deg);
 }
